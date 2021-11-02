@@ -1,0 +1,710 @@
+SELECT
+	Set.Ref AS Ссылка,
+	Set.Head AS Item,
+	Set.Head.BaseStats AS BaseStats,
+	Set.Head.BaseAmount AS BaseAmount,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	ItemStats.Stat AS Stat
+INTO SetHead
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.Head = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	Set.Boots AS Item,
+	Set.Boots.BaseStats AS BaseStats,
+	Set.Boots.BaseAmount AS BaseAmount,
+	ItemStats.Stat AS Stat
+INTO SetBoots
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.Boots = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	Set.Chestplate AS Item,
+	Set.Chestplate.BaseStats AS BaseStats,
+	Set.Chestplate.BaseAmount AS BaseAmount,
+	ItemStats.Stat AS Stat
+INTO SetChestplate
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.Chestplate = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	Set.Gloves AS Item,
+	Set.Gloves.BaseStats AS BaseStats,
+	Set.Gloves.BaseAmount AS BaseAmount,
+	ItemStats.Stat AS Stat
+INTO SetGloves
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.Gloves = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	Set.Sash AS Item,
+	Set.Sash.BaseStats AS BaseStats,
+	Set.Sash.BaseAmount AS BaseAmount,
+	ItemStats.Stat AS Stat
+INTO SetSash
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.Sash = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	Set.LeftRing AS Item,
+	Set.LeftRing.BaseStats AS BaseStats,
+	Set.LeftRing.BaseAmount AS BaseAmount,
+	ItemStats.Stat AS Stat
+INTO SetLeftRing
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.LeftRing = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	Set.RightRing AS Item,
+	Set.RightRing.BaseStats AS BaseStats,
+	Set.RightRing.BaseAmount AS BaseAmount,
+	ItemStats.Stat AS Stat
+INTO SetRightRing
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.RightRing = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	Set.Amulet AS Item,
+	Set.Amulet.BaseStats AS BaseStats,
+	Set.Amulet.BaseAmount AS BaseAmount,
+	ItemStats.Stat AS Stat
+INTO SetAmulet
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.Amulet = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	Set.Shield AS Item,
+	Set.Shield.BaseStats AS BaseStats,
+	Set.Shield.BaseAmount AS BaseAmount,
+	ItemStats.Stat AS Stat
+INTO SetShield
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.Shield = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	Set.Weapon AS Item,
+	Set.Weapon.BaseStats AS BaseStats,
+	Set.Weapon.BaseAmount AS BaseAmount,
+	ItemStats.Stat AS Stat
+INTO SetWeapon
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.Weapon = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Set.Ref AS Ссылка,
+	ItemStats.Stat AS Stat,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds,
+	ItemStats.Ref AS Item
+INTO SetBonus
+FROM
+	Catalog.Set AS Set
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON Set.SetBonuses.SetBonus = ItemStats.Ref
+WHERE
+	Set.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	SetHeadSockets.Ref AS Ссылка,
+	ItemStats.Ref AS Item,
+	ItemStats.LineNumber AS НомерСтроки,
+	ItemStats.Stat AS Stat,
+	ItemStats.AmountPerc AS AmountPerc,
+	ItemStats.Amount AS Amount,
+	ItemStats.Level AS Level,
+	ItemStats.Chance AS Chance,
+	ItemStats.Seconds AS Seconds
+INTO HeadSockets
+FROM
+	Catalog.Set.HeadSockets AS SetHeadSockets
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON SetHeadSockets.SocketItem = ItemStats.Ref
+WHERE
+	SetHeadSockets.Ref = &Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ItemStats.Stat AS Stat,
+	SUM(ItemStats.AmountPerc) AS AmountPerc,
+	SUM(ItemStats.Amount) AS Amount,
+	SUM(ItemStats.Level) AS Level,
+	SUM(ItemStats.Chance) AS Chance,
+	SUM(ItemStats.Seconds) AS Seconds,
+	ItemStats.Ref AS Item,
+	SetBootsSockets.Ref AS Ссылка
+INTO BootsSockets
+FROM
+	Catalog.Set.BootsSockets AS SetBootsSockets
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON SetBootsSockets.SocketItem = ItemStats.Ref
+WHERE
+	SetBootsSockets.Ref = &Ссылка
+
+GROUP BY
+	ItemStats.Stat,
+	ItemStats.Ref,
+	SetBootsSockets.Ref
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ItemStats.Stat AS Stat,
+	SUM(ItemStats.AmountPerc) AS AmountPerc,
+	SUM(ItemStats.Amount) AS Amount,
+	SUM(ItemStats.Level) AS Level,
+	SUM(ItemStats.Chance) AS Chance,
+	SUM(ItemStats.Seconds) AS Seconds,
+	ItemStats.Ref AS Item,
+	SetChestplateSockets.Ref AS Ссылка
+INTO ChestplateSockets
+FROM
+	Catalog.Set.ChestplateSockets AS SetChestplateSockets
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON SetChestplateSockets.SocketItem = ItemStats.Ref
+WHERE
+	SetChestplateSockets.Ref = &Ссылка
+
+GROUP BY
+	ItemStats.Stat,
+	ItemStats.Ref,
+	SetChestplateSockets.Ref
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ItemStats.Stat AS Stat,
+	SUM(ItemStats.AmountPerc) AS AmountPerc,
+	SUM(ItemStats.Amount) AS Amount,
+	SUM(ItemStats.Level) AS Level,
+	SUM(ItemStats.Chance) AS Chance,
+	SUM(ItemStats.Seconds) AS Seconds,
+	ItemStats.Ref AS Item,
+	SetGlovesSockets.Ref AS Ссылка
+INTO GlovesSockets
+FROM
+	Catalog.Set.GlovesSockets AS SetGlovesSockets
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON SetGlovesSockets.SocketItem = ItemStats.Ref
+WHERE
+	SetGlovesSockets.Ref = &Ссылка
+
+GROUP BY
+	ItemStats.Ref,
+	ItemStats.Stat,
+	SetGlovesSockets.Ref
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ItemStats.Stat AS Stat,
+	SUM(ItemStats.AmountPerc) AS AmountPerc,
+	SUM(ItemStats.Amount) AS Amount,
+	SUM(ItemStats.Level) AS Level,
+	SUM(ItemStats.Chance) AS Chance,
+	SUM(ItemStats.Seconds) AS Seconds,
+	ItemStats.Ref AS Item,
+	SetSashSockets.Ref AS Ссылка
+INTO SashSockets
+FROM
+	Catalog.Set.SashSockets AS SetSashSockets
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON SetSashSockets.SocketItem = ItemStats.Ref
+WHERE
+	SetSashSockets.Ref = &Ссылка
+
+GROUP BY
+	ItemStats.Stat,
+	ItemStats.Ref,
+	SetSashSockets.Ref
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ItemStats.Stat AS Stat,
+	SUM(ItemStats.AmountPerc) AS AmountPerc,
+	SUM(ItemStats.Amount) AS Amount,
+	SUM(ItemStats.Level) AS Level,
+	SUM(ItemStats.Chance) AS Chance,
+	SUM(ItemStats.Seconds) AS Seconds,
+	ItemStats.Ref AS Item,
+	SetShieldSockets.Ref AS Ссылка
+INTO ShieldSockets
+FROM
+	Catalog.Set.ShieldSockets AS SetShieldSockets
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON SetShieldSockets.SocketItem = ItemStats.Ref
+WHERE
+	SetShieldSockets.Ref = &Ссылка
+
+GROUP BY
+	ItemStats.Stat,
+	ItemStats.Ref,
+	SetShieldSockets.Ref
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	ItemStats.Stat AS Stat,
+	SUM(ItemStats.AmountPerc) AS AmountPerc,
+	SUM(ItemStats.Amount) AS Amount,
+	SUM(ItemStats.Level) AS Level,
+	SUM(ItemStats.Chance) AS Chance,
+	SUM(ItemStats.Seconds) AS Seconds,
+	ItemStats.Ref AS Item,
+	SetWeaponSockets.Ref AS Ссылка
+INTO WeaponSockets
+FROM
+	Catalog.Set.WeaponSockets AS SetWeaponSockets
+		LEFT JOIN Catalog.Item.Stats AS ItemStats
+		ON SetWeaponSockets.SocketItems = ItemStats.Ref
+WHERE
+	SetWeaponSockets.Ref = &Ссылка
+
+GROUP BY
+	ItemStats.Ref,
+	ItemStats.Stat,
+	SetWeaponSockets.Ref
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	SetHead.Ссылка AS Set,
+	SetHead.Item AS Item,
+	SetHead.BaseAmount AS BaseAmount,
+	SetHead.AmountPerc AS AmountPerc,
+	SetHead.Amount AS Amount,
+	SetHead.Level AS Level,
+	SetHead.Chance AS Chance,
+	SetHead.Seconds AS Seconds,
+	SetHead.BaseStats AS BaseStats,
+	SetHead.Stat AS Stat
+INTO Result
+FROM
+	SetHead AS SetHead
+
+UNION ALL
+
+SELECT
+	SetBoots.Ссылка,
+	SetBoots.Item,
+	SetBoots.BaseAmount,
+	SetBoots.AmountPerc,
+	SetBoots.Amount,
+	SetBoots.Level,
+	SetBoots.Chance,
+	SetBoots.Seconds,
+	SetBoots.BaseStats,
+	SetBoots.Stat
+FROM
+	SetBoots AS SetBoots
+
+UNION ALL
+
+SELECT
+	SetChestplate.Ссылка,
+	SetChestplate.Item,
+	SetChestplate.BaseAmount,
+	SetChestplate.AmountPerc,
+	SetChestplate.Amount,
+	SetChestplate.Level,
+	SetChestplate.Chance,
+	SetChestplate.Seconds,
+	SetChestplate.BaseStats,
+	SetChestplate.Stat
+FROM
+	SetChestplate AS SetChestplate
+
+UNION ALL
+
+SELECT
+	SetGloves.Ссылка,
+	SetGloves.Item,
+	SetGloves.BaseAmount,
+	SetGloves.AmountPerc,
+	SetGloves.Amount,
+	SetGloves.Level,
+	SetGloves.Chance,
+	SetGloves.Seconds,
+	SetGloves.BaseStats,
+	SetGloves.Stat
+FROM
+	SetGloves AS SetGloves
+
+UNION ALL
+
+SELECT
+	SetSash.Ссылка,
+	SetSash.Item,
+	SetSash.BaseAmount,
+	SetSash.AmountPerc,
+	SetSash.Amount,
+	SetSash.Level,
+	SetSash.Chance,
+	SetSash.Seconds,
+	SetSash.BaseStats,
+	SetSash.Stat
+FROM
+	SetSash AS SetSash
+
+UNION ALL
+
+SELECT
+	SetLeftRing.Ссылка,
+	SetLeftRing.Item,
+	SetLeftRing.BaseAmount,
+	SetLeftRing.AmountPerc,
+	SetLeftRing.Amount,
+	SetLeftRing.Level,
+	SetLeftRing.Chance,
+	SetLeftRing.Seconds,
+	SetLeftRing.BaseStats,
+	SetLeftRing.Stat
+FROM
+	SetLeftRing AS SetLeftRing
+
+UNION ALL
+
+SELECT
+	SetRightRing.Ссылка,
+	SetRightRing.Item,
+	SetRightRing.BaseAmount,
+	SetRightRing.AmountPerc,
+	SetRightRing.Amount,
+	SetRightRing.Level,
+	SetRightRing.Chance,
+	SetRightRing.Seconds,
+	SetRightRing.BaseStats,
+	SetRightRing.Stat
+FROM
+	SetRightRing AS SetRightRing
+
+UNION ALL
+
+SELECT
+	SetAmulet.Ссылка,
+	SetAmulet.Item,
+	SetAmulet.BaseAmount,
+	SetAmulet.AmountPerc,
+	SetAmulet.Amount,
+	SetAmulet.Level,
+	SetAmulet.Chance,
+	SetAmulet.Seconds,
+	SetAmulet.BaseStats,
+	SetAmulet.Stat
+FROM
+	SetAmulet AS SetAmulet
+
+UNION ALL
+
+SELECT
+	SetShield.Ссылка,
+	SetShield.Item,
+	SetShield.BaseAmount,
+	SetShield.AmountPerc,
+	SetShield.Amount,
+	SetShield.Level,
+	SetShield.Chance,
+	SetShield.Seconds,
+	SetShield.BaseStats,
+	SetShield.Stat
+FROM
+	SetShield AS SetShield
+
+UNION ALL
+
+SELECT
+	SetWeapon.Ссылка,
+	SetWeapon.Item,
+	SetWeapon.BaseAmount,
+	SetWeapon.AmountPerc,
+	SetWeapon.Amount,
+	SetWeapon.Level,
+	SetWeapon.Chance,
+	SetWeapon.Seconds,
+	SetWeapon.BaseStats,
+	SetWeapon.Stat
+FROM
+	SetWeapon AS SetWeapon
+
+UNION ALL
+
+SELECT
+	SetBonus.Ссылка,
+	SetBonus.Item,
+	NULL,
+	SetBonus.AmountPerc,
+	SetBonus.Amount,
+	SetBonus.Level,
+	SetBonus.Chance,
+	SetBonus.Seconds,
+	NULL,
+	SetBonus.Stat
+FROM
+	SetBonus AS SetBonus
+
+UNION ALL
+
+SELECT
+	HeadSockets.Ссылка,
+	HeadSockets.Item,
+	NULL,
+	HeadSockets.AmountPerc,
+	HeadSockets.Amount,
+	HeadSockets.Level,
+	HeadSockets.Chance,
+	HeadSockets.Seconds,
+	NULL,
+	HeadSockets.Stat
+FROM
+	HeadSockets AS HeadSockets
+
+UNION ALL
+
+SELECT
+	BootsSockets.Ссылка,
+	BootsSockets.Item,
+	NULL,
+	BootsSockets.AmountPerc,
+	BootsSockets.Amount,
+	BootsSockets.Level,
+	BootsSockets.Chance,
+	BootsSockets.Seconds,
+	NULL,
+	BootsSockets.Stat
+FROM
+	BootsSockets AS BootsSockets
+
+UNION ALL
+
+SELECT
+	ChestplateSockets.Ссылка,
+	ChestplateSockets.Item,
+	NULL,
+	ChestplateSockets.AmountPerc,
+	ChestplateSockets.Amount,
+	ChestplateSockets.Level,
+	ChestplateSockets.Chance,
+	ChestplateSockets.Seconds,
+	NULL,
+	ChestplateSockets.Stat
+FROM
+	ChestplateSockets AS ChestplateSockets
+
+UNION ALL
+
+SELECT
+	GlovesSockets.Ссылка,
+	GlovesSockets.Item,
+	NULL,
+	GlovesSockets.AmountPerc,
+	GlovesSockets.Amount,
+	GlovesSockets.Level,
+	GlovesSockets.Chance,
+	GlovesSockets.Seconds,
+	NULL,
+	GlovesSockets.Stat
+FROM
+	GlovesSockets AS GlovesSockets
+
+UNION ALL
+
+SELECT
+	SashSockets.Ссылка,
+	SashSockets.Item,
+	NULL,
+	SashSockets.AmountPerc,
+	SashSockets.Amount,
+	SashSockets.Level,
+	SashSockets.Chance,
+	SashSockets.Seconds,
+	NULL,
+	SashSockets.Stat
+FROM
+	SashSockets AS SashSockets
+
+UNION ALL
+
+SELECT
+	ShieldSockets.Ссылка,
+	ShieldSockets.Item,
+	NULL,
+	ShieldSockets.AmountPerc,
+	ShieldSockets.Amount,
+	ShieldSockets.Level,
+	ShieldSockets.Chance,
+	ShieldSockets.Seconds,
+	NULL,
+	ShieldSockets.Stat
+FROM
+	ShieldSockets AS ShieldSockets
+
+UNION ALL
+
+SELECT
+	WeaponSockets.Ссылка,
+	WeaponSockets.Item,
+	NULL,
+	WeaponSockets.AmountPerc,
+	WeaponSockets.Amount,
+	WeaponSockets.Level,
+	WeaponSockets.Chance,
+	WeaponSockets.Seconds,
+	NULL,
+	WeaponSockets.Stat
+FROM
+	WeaponSockets AS WeaponSockets
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	Result.Set AS Set,
+	Result.Item AS Item,
+	Result.Stat AS Stat,
+	SUM(CASE
+			WHEN Result.Amount > 0
+				THEN Result.Amount
+			WHEN Result.AmountPerc > 0
+				THEN Result.AmountPerc
+			WHEN Result.Level > 0
+				THEN Result.Level
+			WHEN Result.Chance > 0
+				THEN Result.Chance
+			WHEN Result.Seconds > 0
+				THEN Result.Seconds
+		END) AS Amount,
+	Result.BaseStats AS BaseStat,
+	SUM(Result.BaseAmount) AS BaseAmount,
+	Result.Item.ItemType AS ItemType
+FROM
+	Result AS Result
+
+GROUP BY
+	Result.Set,
+	Result.Item,
+	Result.Stat,
+	Result.BaseStats,
+	Result.Item.ItemType
